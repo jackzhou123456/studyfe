@@ -1,1 +1,17 @@
-a.radio {background-image: "/i/eg_bg_07.gif";}
+table{
+    border-collapse: collapse;
+    width:100%;
+}
+td{
+    border: 1px solid #f00;
+    height: 60px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
+}
+tr:nth-child(odd){
+    background-color: #eee;
+}
+tr:nth-child(2) td:nth-child(3){
+    vertical-align: middle;
+}

@@ -1,0 +1,37 @@
+#area{
+    width: 1000px;
+    height: 600px;
+    background: #eee;
+    border-bottom: solid 6px #442233;
+}
+#area .ball{
+    width: 50px;
+    height: 50px;
+    background: #332244;
+    border-radius: 50%;
+    background: radial-gradient(circle at 10px 12px, #5cabff, #111);
+    box-shadow: 0 20px 10px #333;
+    border:none;
+}
+#area .ball{
+    position: relative;
+    animation:ball 2s infinite ;
+}
+@keyframes ball {
+    0%{
+        left: 20px;
+        top: 20px;
+    }
+    45%{
+        left: 480px;
+        top: 540px;
+    }
+    75%{
+        left: 960px;
+        top: 300px;
+    }
+    100%{
+        left: 20px;
+        top: 20px;
+    }
+}
