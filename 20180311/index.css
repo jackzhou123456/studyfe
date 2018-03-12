@@ -17,6 +17,8 @@ html,body{
     font-size: 50px;
     line-height: 50px;
     vertical-align: bottom;
+    padding-top: 6px;
+    box-sizing: border-box;
 }
 .contant{
     width: 100%;
@@ -30,15 +32,17 @@ html,body{
     display: inline-block;
     height:300px;
 }
-.list1{
-    /*display: inline-block;*/
+.column{
     float: left;
-    width: 16.49%;
+    width: 8.33%;
     height: 300px;
     background-color: #aaa;
-    margin: 10px 1px;
-    padding: 0;
+    margin: 10px 10px;
 }
-.list2{
+.column:first-of-type{
+    margin-left: 0px;
+}
+.column:last-of-type{
+    float: right;
+}
 
-}

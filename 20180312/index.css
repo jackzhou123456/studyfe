@@ -23,17 +23,17 @@ html,body{
     display: block;
 }
 .left{
-    display: inline-block;
+    /*display: inline-block;*/
     float: left;
     background-color: red;
     height: 800px;
-    width: 29.5%;
+    width: 29%;
 
 
 
 }
 .right {
-    display: inline-block;
+    /*display: inline-block;*/
     float: right;
     background-color: blue;
     width: 70%;
