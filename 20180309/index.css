@@ -1,0 +1,161 @@
+html,body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+.wrap{
+    width: 1000px;
+    margin:auto;
+}
+.clearFix:after,.clearFix:before{
+    content: " ";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.floatLeft{
+    float:left
+}
+.floatRight{
+    float: right;
+}
+
+
+.header{
+    border-top: solid 4px #47b651;
+    height: 46px;
+    padding: 16px 0;
+}
+.header .floatRight ul li{
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 20px;
+    margin: 13px 0;
+}
+.header .floatRight ul li+li{
+    border-left: solid 1px #333;
+    position: relative;
+}
+.header .floatRight .hoverShow{
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+    padding: 5px 10px;
+    display: none;
+    border: solid 1px #eee;
+    box-shadow: 0 4px 5px #aaa;
+}
+.header .floatRight ul li:nth-child(2):hover .hoverShow{
+    display: block;
+}
+
+
+.banner {
+    height:455px;
+    background-color: #090b1a;
+    background-image: url('bg_banner3c2fae.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.banner .wrap{
+    height: 455px;
+    position: relative;
+}
+.banner .wrap .formContainer{
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+.banner .wrap .formContainer .title{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: "microsoft yahei";
+    color: #666;
+}
+.banner .wrap .formContainer table{
+    margin-top: 24px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.banner .wrap .formContainer tr{
+    background-image: url("data:image/svg+xml;charset=utf8, <svg width='17' height='16' viewBox='0 0 17 16' xmlns='http://www.w3.org/2000/svg'><path d='M4.696 4.92c0 1.843 1.001 2.93 1.52 3.568.014.847.008.8.014 1.062-.627.58-5.224 3.152-5.224 3.897v.933c0 .347-.11.639.64.621H15.1c.719.04.64-.274.64-.621v-.933c0-.745-4.83-3.446-5.395-4.025v-.853c.877-.823 1.662-1.895 1.662-3.739 0-1.913-1.424-3.83-3.634-3.83-2.209 0-3.676 2.006-3.676 3.92z' stroke='#aaa' fill='#aaa' fill-rule='evenodd'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 12px 12px;
+}
+.banner .wrap .formContainer tr:last-child{
+
+}
+
+.banner .wrap .formContainer td{
+    padding: 12px 2px 12px 42px;
+    border: solid 1px #ddd;
+}
+
+.banner .wrap .formContainer td input{
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+    border: none;
+    color: #666;
+}
+.banner .wrap .formContainer td input:focus{
+    outline: none;
+}
+.formContainer table+p a{
+    text-decoration: none;
+    color:#777;
+    font-size: 15px;
+}
+.formContainer table+p a:hover{
+    text-decoration: underline;
+    text-decoration-color: #444;
+}
+.formContainer .button{
+    width: 140px;
+    text-align: center;
+    padding: 6px 0;
+    background-color: #47b651;
+    color: #fff;
+    line-height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.formContainer .button:hover{
+    background-color: #42ad49;
+}
+
+.banner .wrap .qrCodeContainer{
+    background-color: #fff;
+    height: 180px;
+    width: 160px;
+    position: absolute;
+    right:-165px;
+    top: 30px;
+}
+.banner .wrap .qrCodeContainer img{
+    display: block;
+    margin: 18px auto;
+}
+
+.banner .wrap .qrCodeContainer p{
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.2;
+}

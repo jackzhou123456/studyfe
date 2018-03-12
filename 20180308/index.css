@@ -1,0 +1,57 @@
+body,html{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+/*#zl {*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*background-color: #690;*/
+    /*animation: wode 2s infinite;*/
+    /*position: relative;*/
+/*}*/
+div{
+    width: 200px;
+    height: 200px;
+    background-color: #690;
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+
+/*@keyframes wode {*/
+    /*0% {*/
+        /*left: 0;*/
+        /*top: 0;*/
+        /*margin-left:0;*/
+        /*margin-top:0;*/
+        /*border-radius: 0%;*/
+    /*}*/
+    /*25% {*/
+        /*left: 100%;*/
+        /*top:0;*/
+        /*margin-left: -200px;*/
+        /*margin-top: 0;*/
+        /*border-radius: 50%;*/
+    /*}*/
+    /*50% {*/
+        /*left: 100%;*/
+        /*top: 100%;*/
+        /*margin-left: -200px;*/
+        /*margin-top: -200px;*/
+        /*border-radius: 0%;*/
+    /*}*/
+    /*75% {*/
+        /*left: 0;*/
+        /*top: 100%;*/
+        /*margin-top: -200px;*/
+        /*margin-left: 0;*/
+        /*border-radius:50%;*/
+    /*}*/
+    /*100% {*/
+        /*left: 0;*/
+        /*top: 0;*/
+        /*margin-top: 0;*/
+        /*margin-left: 0;*/
+        /*border-radius:0%;*/
+    /*}*/

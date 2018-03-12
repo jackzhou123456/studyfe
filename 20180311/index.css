@@ -1,0 +1,44 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.row:after,.row:before{
+    content: " ";
+    height:0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.header{
+    height: 60px;
+    width:100%;
+    background-color: blue;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+    vertical-align: bottom;
+}
+.contant{
+    width: 100%;
+    min-height: 900px;
+    background-color: red;
+    display: inline;
+
+}
+.contant .row1{
+    width: 100%;
+    display: inline-block;
+    height:300px;
+}
+.list1{
+    /*display: inline-block;*/
+    float: left;
+    width: 16.49%;
+    height: 300px;
+    background-color: #aaa;
+    margin: 10px 1px;
+    padding: 0;
+}
+.list2{
+
+}

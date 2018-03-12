@@ -1,0 +1,42 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 80px;
+    width: 100%;
+    background-color: gray;
+}
+.contant{
+    background-color: #fff;
+    width: 100%;
+    min-height: 800px;
+    box-sizing: border-box;
+    border-top:8px solid #fff;
+
+}
+.content:after,.content:before{
+    content: " ";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+.left{
+    display: inline-block;
+    float: left;
+    background-color: red;
+    height: 800px;
+    width: 29.5%;
+
+
+
+}
+.right {
+    display: inline-block;
+    float: right;
+    background-color: blue;
+    width: 70%;
+    height: 800px;
+
+}

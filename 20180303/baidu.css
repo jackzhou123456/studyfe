@@ -1,0 +1,265 @@
+html,body{
+    margin: 0;
+    padding: 0
+}
+
+.fixHead{
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 1px #aaa;
+}
+.fixHead img.logo{
+    display: inline-block;
+    height: 35px;
+    margin: 10px 6px;
+}
+.fixHead input{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 480px;
+    height: 40px;
+    top: 10px;
+    left: 130px;
+    margin: 0;
+    position: absolute;
+    border: solid 1px #aaa;
+}
+.fixHead input:focus,.fixHead button:focus{
+    outline: none;
+    border: solid 1px #39f;
+}
+.fixHead button {
+    position: absolute;
+    background-color: #39f;
+    color: #fff;
+    padding: 5px 32px;
+    top: 10px;
+    left: 609px;
+    height: 40px;
+    font-size: 16px;
+}
+.fixHead button:hover{
+    cursor: pointer;
+    background-color: #3390f0;
+}
+
+.fixHead-floatRight li{
+    display: inline-block;
+    padding: 4px 6px;
+    font-size: 14px;
+}
+.fixHead-floatRight li a{
+    color: #666;
+}
+
+.fixHead-floatRight{
+    float: right;
+}
+.category{
+    margin-top: 60px;
+    background-color: #ddd;
+    padding-left: 130px;
+    height: 40px;
+}
+.category ul{
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+.category li{
+    box-sizing: border-box;
+    height: 40px;
+    margin: 0;
+    display: inline-block;
+    padding: 4px 6px;
+    font-size: 14px;
+    line-height: 40px;
+}
+.category li.active{
+    border-bottom: solid 2px #39f;
+}
+.category li a{
+    color: #555;
+    text-decoration: none;
+}
+.main{
+    box-sizing: border-box;
+    min-height: 1000px;
+    width: 100%;
+    padding-left: 130px;
+    padding-top: 16px;
+}
+.main-top{
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.main-left{
+    box-sizing: border-box;
+    width: 60%;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.main-left ul , .main-left li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main-left ul li{
+    margin-bottom: 16px;
+}
+.main-left ul li em{
+    color: #f65;
+}
+.main-left ul li h2{
+    font-size: 17px;
+    color: rgb(80,80,200);
+    margin: 0px 0 8px;
+}
+.main-left ul li h2 a{
+    color: inherit;
+}
+.main-left ul li p {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+}
+.main-left .origin{
+    color: #480;
+}
+.main-left .photo{
+    color: #888;
+}
+.main-left .relative-result{
+    width: 100%;
+
+}
+.main-left .relative-result li{
+    display: inline-block;
+    width: 33%;
+}
+.main-left .pagination,.main-left .pagination li{
+    margin: 0;
+    padding: 0;
+}
+.main-left .pagination li{
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: solid 1px #aaa;
+    text-align: center;
+    cursor: pointer;
+}
+.main-left .pagination li:hover:not(.active){
+    background-color: #ccc;
+    border-color: #69f;
+}
+.main-left .pagination li.active{
+    border: none;
+    cursor: default;
+}
+.main-right{
+    vertical-align: top;
+    min-height: 500px;
+    box-sizing: border-box;
+    border-left: solid 1px #ccc;
+    margin-left:4%;
+    padding-left: 20px;
+    padding-right: 48px;
+    width: 35%;
+    display: inline-block;
+}
+.main-right .title {
+    width: 100%;
+    position: relative;
+
+}
+.main-right .title span:nth-child(2) {
+    float: right
+}
+.main-right .itemList,.main-right .itemList li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-right .itemList{
+    width: 100%;
+}
+.main-right .itemList li {
+    box-sizing: border-box;
+    padding: 15px;
+    display: inline-block;
+    width: 24.2%;
+}
+.main-right .itemList li img{
+    width: 100%;
+}
+.hot-tittle span{}
+.hot-tittle a{
+    float:right;
+}
+.main-right table{
+    margin-top: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.main-right table tr{
+    border-top: solid 1px #ddd
+}
+.main-right table tr:last-child{
+    border-bottom: solid 1px #ddd
+}
+.main-right table td,.main-right table th{
+    text-align: left;
+    padding: 6px;
+}
+.main-right table td:last-child,.main-right table th:last-child{
+    width: 80px;
+}
+.main-right table th{
+    background-color: #eee;
+    color: #666;
+}
+.main-right table td:first-child{
+    color: #35c;
+}
+.main-right table td:last-child{
+    color: #444;
+}
+
+
+.main-right table td .number{
+    background-color: #8af;
+    color: #fff;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 1px 2px;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.main-right tr:nth-child(2) td .number{
+    background-color: #f30;
+}
+.main-right tr:nth-child(3) td .number{
+    background-color: #f60;
+}
+.main-right tr:nth-child(4) td .number{
+    background-color: #fa0;
+}
+.main-right .origin{
+    text-align:right;
+}
+
+.footer{
+    background-color: #ccc;
+}
