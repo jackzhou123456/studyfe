@@ -1,0 +1,38 @@
+#d1{
+    background-color: #226666;
+    border: solid 20px #da4;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow:  3px 10px 4px 3px rgba(244,33,11,0.2),3px 10px 4px 3px #43f;
+}
+#d2{
+    background-color: #226666;
+    border-color: #ac3;
+    border-style: solid;
+    border-width: 10px 20px 50px;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    box-sizing: content-box;
+    margin-top: 120px;
+}
+#d3{
+    width: 50px;
+    height: 50px;
+    background-color: #aaccdd;
+}
+
+#d4{
+    width: 400px;
+    height: 200px;
+    background-color: #222;
+    border-radius: 50%;
+    margin: 200px;
+    box-shadow: 0 0 10px 10px rgba(3,10,11,0.4) , 10px 0 10px 30px rgba(133,220,20,0.5), 10px 0 20px 60px rgba(133,20,230,0.5);
+}
+.test{
+    /*list-style-image: url("");*/
+    list-style-image: url("http://www.css88.com/jqapi-1.9/images/tanzhouedu.jpeg");
+}

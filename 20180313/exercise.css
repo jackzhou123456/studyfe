@@ -1,0 +1,43 @@
+.container{
+    width: 1000px;
+    height: 600px;
+    border: 16px solid #632;
+    background: #371;
+    position:absolute;
+}
+.ball{
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 10px 12px, #5cabff, #111);
+    box-shadow: 0px 0px 5px #111;
+    position: absolute;
+}
+.container:hover .ball{
+    /*color: #f33;*/
+    animation: ball 5s ease-out infinite;
+}
+@keyframes ball{
+    0%{
+        top:0;
+        left: 0;
+    }
+    20%{
+        top:550px;
+        left: 500px;
+    }
+    40%{
+        top: 300px;
+        left: 950px;
+    }
+    100%{
+        top:0;
+        left: 0;
+    }
+
+
+}

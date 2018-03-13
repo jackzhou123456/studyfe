@@ -1,0 +1,49 @@
+body{
+    font-size: 24px;
+}
+h1,h2{
+    text-align: center;
+    color: #83f;
+}
+h2{
+    color: #666;
+}
+#content{
+    width: 1200px;
+    margin: auto;
+}
+p{
+    line-height: 1.5;
+    text-indent: 48px;
+    transition: all 0.5s;
+    padding: 10px;
+}
+p:hover{
+    background-color: #acd;
+}
+span.say{
+    color: #266;
+}
+ul li {
+    line-height: 1.6;
+    list-style: none;
+    /*display: inline-block;*/
+    margin-top: 30px;
+    padding: 5px 14px;
+    border: solid 1px #226666;
+    border-radius: 12px;
+    width: 200px;
+
+}
+ul li img{
+    width: 100%;
+}
+ul li.import{
+    font-family: "microsoft yahei";
+    font-weight: bold;
+    box-shadow: 0 2px 12px #f32;
+}
+#comment{
+    color: red;
+    margin-bottom: 30px;
+}

@@ -40,12 +40,22 @@
 .offset-11{margin-left: 91.66667%}
 
 .demoBlock1,.demoBlock2{
-    height: 200px;
-    margin: 5px;
+    height: 300px;
+    margin: 4px;
 }
 .demoBlock1{
-    background: #324;
+    background: #234;
 }
 .demoBlock2{
-    background: #423;
+    background: #692;
+}
+.demoBlock3{
+    height: 300px;
+    margin: 4px;
+    background-color: #666;
+}
+.demoBlock4{
+    height: 300px;
+    margin: 4px;
+    background-color: #ccc;
 }
