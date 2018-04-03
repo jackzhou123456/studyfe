@@ -30,7 +30,7 @@ h1-h6主标题 <small></small>副标题
 缩略词   .attribute
 默认样式引用  <blockquote>  </blockquote>
 右对齐引用效果 <blockquote class="blockquote-reverse">
-列表
+//列表
 无序列表
 有序列表
 无样式列表(.list-style)
@@ -48,6 +48,52 @@ h1-h6主标题 <small></small>副标题
 带鼠标悬停的状态  .table-hover
 紧缩表格  .table-condensed
 其它状态类.active .info .warning .danger 等(单元格设置背景颜色)
-表单
+//表单
+内联表单
+水平列表表单
+文本域  <textarea class="form-control" ></textarea>
+内联单选与多选
+下拉列表 <select class="form-control">  显示多余选项<select multiple class="form-control">
+焦点状态  :focus
+禁用状态  disable
+水平排列的表单组尺寸  <div class="form-group form-group-lg">
+调整列(column)尺寸
+//按钮   <a>、<button> 或 <input>
+与预定义样式 button  .btn btn-default   .btn btn-primary 等等
+尺寸  .btn-lg   .btn-sm    .btn-xs
+改变  .btn-block  元素的属性,改为父元素的width的100%
+//图片
+图片形状 .img-rounded方形  .img-circle 圆形     .img-thumbnail带点padding框
+//辅助
+情景文本颜色 .text-muted  .text-primary  .text-success等等
+情景背景颜色 .bg-primar   .bg-success    .bg-danger
+关闭按钮  三角符
+让元素块居中 display: block;
+        margin-left: auto;
+        margin-right: auto;
+清除浮动
+.clear:before,.clear:after{
+       content: "";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       height: 0;
+     }
+//组件
+下拉菜单 .dropdown
+上拉菜单 .dropup
+//按钮组
+工具栏
+尺寸
+嵌套
+//导航条
+
+
+
+
+
+
+
+
 
 
