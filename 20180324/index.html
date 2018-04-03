@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Bootstrap</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .row [class*='col'] {
+            height: 80px;
+            background-color: #ccc;
+            border: solid 1px #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="wrap">
+        <div class="list">
+            <ul>
+                <li><span>Bootstrap中文网</span></li>
+                <li>Bootstrap2中文文网</li>
+                <li>Bootstrap3中文文网</li>
+                <li>Bootstrap4中文文网</li>
+                <li>Less教程</li>
+                <li>jQuery API</li>
+                <li>网站实例</li>
+                <li>Bootstrap训练营</li>
+                <li>关于</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container" style="background-color: #333;height:300px"></div>
+<div class="container-fluid" style="background: #ff00ff; height:40px;">
+    ...
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-1" style="background-color: #666">1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">天向上</div>
+</div>
+<div class="row">
+    <div class="col-md-8">好好学习,天天向上</div>
+    <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">.col-lg-4</div>
+        <div class="col-lg-4">.col-lg-4</div>
+        <div class="col-lg-4">.col-lg-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">.col-xs-4</div>
+        <div class="col-xs-4">.col-xs-4</div>
+        <div class="col-xs-4">.col-xs-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-9">
+            Level 1: .col-sm-9
+            <div class="row">
+                <div class="col-xs-8 col-sm-6">
+                    Level 2: .col-xs-8 .col-sm-6
+                </div>
+                <div class="col-xs-4 col-sm-6">
+                    Level 2: .col-xs-4 .col-sm-6
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            Level 1: .col-sm-3
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

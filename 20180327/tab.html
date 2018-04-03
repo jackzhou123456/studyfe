@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .tabWrap {
+            padding: 0;
+            margin: 0;
+        }
+
+        .tabTitle > li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px;
+            background-color: #669900;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .tabTitle > li.active {
+            background-color: #999;
+        }
+
+        .tabContent {
+            border: 1px solid #333;
+            padding: 20px;
+        }
+
+        .tabContent > li {
+            display: none;
+        }
+
+        .tabContent > li.active {
+            display: block;
+        }
+        /*.tabContent > li:nth-child(2){*/
+            /*display: block;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="tabWrap">
+    <ul class="tabTitle">
+        <li class="active">Title1</li>
+        <li>Title2</li>
+        <li>Title3</li>
+        <li>Title4</li>
+        <li>Title5</li>
+    </ul>
+    <ul class="tabContent">
+        <li class="active">Content1</li>
+        <li>Content2</li>
+        <li>Content3</li>
+        <li>Content4</li>
+        <li>Content5</li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+         $(".tabTitle > li").click(function () {
+             var index=$(".tabTitle>li").index(this);
+             if (index===-1) return;
+             $(this).addClass("active").siblings().removeClass("active");
+             $(".tabContent>li:nth-child("+(index+1)+")").addClass("active").siblings().removeClass("active");
+         })
+    })
+
+
+</script>
+</body>
+</html>

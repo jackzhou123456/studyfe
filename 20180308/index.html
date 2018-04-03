@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="index.css">
+    <!--<link rel="stylesheet" href="index.css">-->
+    <style>
+        .left { float: left; }
+        .right { float: right; }
+        .clear-left { clear: left; }
+        .clear-right { clear: right; }
+        .clear-both { clear: both; }
+        .clear-title { display: block; padding-top: 15px; clear: both; }
+        .clear-box { padding: 5px; margin: 8px auto; background-color: #eee; }
+    </style>
 </head>
 <body>
-<div id="zl">4</div>
-<div >1</div>
-<div >2</div>
-<div >3</div>
+<!--<div id="zl">4</div>-->
+<!--<div >1</div>-->
+<!--<div >2</div>-->
+<!--<div >3</div>-->
+<strong class="clear-title">clear: left, 左侧抗浮动，右侧沦陷</strong>
+<div class="clear-box">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm1.jpg" class="left">
+    <div class="clear-left">我不喜欢你，我不要和你在一起~</div>
+</div>
+<div class="clear-box">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm3.jpg" class="right">
+    <div class="clear-left">我不喜欢你，我不要和你在一起~</div>
+</div>
 
+<strong class="clear-title">clear: right, 右侧抗浮动，左侧沦陷</strong>
+<div class="clear-box">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm1.jpg" class="left">
+    <div class="clear-right">我不喜欢你，我不要和你在一起~</div>
+</div>
+<div class="clear-box">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm3.jpg" class="right">
+    <div class="clear-right">我不喜欢你，我不要和你在一起~</div>
+</div>
+
+<strong class="clear-title">clear: left; float: left, 垂直环绕布局</strong>
+<div class="clear-box">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm1.jpg" class="left">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm3.jpg" class="left clear-left">
+    <div>我不喜欢你，我不要和你在一起~</div>
+</div>
+
+<strong class="clear-title">clear: right; float: right, 垂直环绕布局</strong>
+<div class="clear-box">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm1.jpg" class="right">
+    <img src="http://image.zhangxinxu.com/image/study/s/s128/mm3.jpg" class="right clear-right">
+    <div>我不喜欢你，我不要和你在一起~字数不够多，...这里省略1000字...</div>
+</div>
 </body>
 </html>

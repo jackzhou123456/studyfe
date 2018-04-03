@@ -1,0 +1,96 @@
+//选择器
+// $("*")选择所有                                    $("#zl")选择id为zl的所有元素                $(".zl")选中class为zl的所有元素
+// $(".zl.zy")选中class为zl且为zy的元素               $("p")选中所有的p元素                       $("p:first")选中某父元素的第一个的所有p元素
+// $("p:last")选中某父元素的最后一个子元素p元素         $("tr:even")选中tr的偶数行                  $("tr:odd")选中tr的奇数行
+// $("p:nth-child(n)")选中属于其父元素的第n个子元素p    $("tr:nth-child(2n)")选中tr的偶数行         $("tr:nth-child(2n+1)")选中tr的基数行
+// $("li:eq(2)")选中li列表中的第三个li                $("li:gt(3)")选中li列表大于3的所有li         $(li:lt(3))选中li列表小于3的所有li
+// $(":header")选中所有标题元素(h1-h6)                $(":animated")选中所有动画元素               $(":empty")选中所有的空元素
+// $("p:hidden")选中所有隐藏的p元素                   $("table:visible")选中所有可见的表格         $("p:contains(is)")选中包含"is"的p元素
+// $(":input")选中所有'input'元素                     $(":text")选中所有type="text"的input元素    $(":password")选中所有type="password"的input元素
+// $(":radio")选中所有type="radio"的input元素         $(":checkbox")选中所有type="checkbox"的input元素    $(":submit")选中所有type="submit"的input元素
+// $(":reset")选中所有type="reset"的input元素          $(":button")选中所有type="button"的input元素       $(":image")选中所有type="image"的input元素
+// $(":file")选中所有type="file"的input元素            $(":enabled")选中所有被激活的input元素              $(":disabled")选中所有被禁用的input元素
+// $(":selected")选中所有被选取的input元素(一般指下拉菜单)              $(":checked")选中所有被选中的input元素(一般指单选框或者复选框)
+// $("[href='#']")选中href属性值为#的元素              $("[href!='#']")选中href不为#的元素          $("[href$='.jpg']")选中href中以'.jpg'结尾的元素
+// $("[href]")选中带有href属性的元素
+//
+//事件
+// .bind()向被选元素添加一个或者多个事件,并规定事件发生时运行的函数       单个 $("p").bind("click",function(){   $("h3").slideToggle()})
+//                                                                  多个 $("p").({event:function,event:function})
+// .unbind()移除被选元素的事件,并终止相关的函数                             $("p").unbind()
+// .live()向被选元素添加一个或者多个事件,并规定事件发生时运行的函数       单个  $("p").live("click",function(){ $("h2").sildeToggle()  })
+//                                                                多个  $("p").live({click:function(){ $("h2").slide()   },mouseover:function(){        //                                                                                                      $("h3").fadeTo(200,0.3)  };})
+// .die()移除通过live()添加的被选元素的事件,并终止相关的函数               $("p").live("click",function(){ $(this).slideToggle(); });
+//                                                                   $("button").click(function(){ $("p").die();});
+// .load()当指定的元素（及子元素）已加载时，会发生的事件                    $("img").load(function(){ $("p").load("图片已加载")   })
+// .unload()当用户离开页面时，会发生事件                                 $(window).unload(function(){ alert("leave") })
+// .resize()当调整浏览器窗口的大小时，发生的事件                        x=0  $(window).resize(function(){  $("p").text(x+1) })
+// .scroll()当用户滚动指定的元素时，会发生的事件                          $("div").scroll(function(){ $("p").hide()})
+// .select()当 textarea 或文本类型的 input 元素中的文本被选择时，会发生的事件。
+// .toggle()用于《绑定两个或多个事件处理器函数》,响应被选元素的轮流的的事件。 $("p").toggle(function(){ $("body").css("background-color","gray")},
+//                                                                        function(){$("body").css("background-color","blue")},                         //                                                                      function(){$("body").css("background-color","red")},)
+// .ready()DOM已经加载,并且图片图像也完全呈现,发生的事件                   $(document).ready(function(){ $("p").click(function(){ $("h2").hide() }) })
+// .error()当元素遇到错误或者没有正确加载时发生的事件                      $("img").error(function(){ $("img").replaceWith(图片未加载) })
+// .focus()当元素获得焦点时发生focus事件                $("input").focus(function(){ $("input").css("font-size","20px")  })
+// .blur()当元素失去焦点时发生focus事件                 $("input").blur(function(){ $("input").css("font-size","10px")   })
+// .click()当单点击选定元素发生的事件                   $("p").click(function(){    $("h2").hideToggle()         })
+// .dblclick()当双击被选元素发生的事件                  $("p").dblclick(function(){    $("h2").hideToggle()         })
+
+//效果
+//
+// .animate() 只有数字值可以创建动画"margin:30px",字符串无法创建动画"background-color:red
+//  style写连体属性时,首字必须母大些"borderBottomWidth"(即DOM名称)
+//  可使用相对值"+="—="呈现动画(位置移动时,必须改变position,默认是static)
+//  写法$("selector").animate(style,speed,easing,callback)              $(selector).animate({params},speed,callback);
+.clearQueue()仅用于停止队列中所有未执行的函数。   .stop()适用于滑动,动画等
+// .fadeIn(speed,callback)淡入  .fadeOut(speed,callback)淡出   .fadeToggle(speed,callback)切换淡入淡出   .fadeTo(speed,opacity,callback)改到指定值的不透明度
+// .hide(speed,callback)隐藏     .show(speed,callback)显现      .toggle(speed,callback)显隐切换
+// .slideUp(speed,callback)上滑   .slideDown(speed,callback)下滑    .slideToggle(speed,callback)上下切换
+// .stop(stopAll,goToEng)停止被选元素的动画,参数可选(这两个参数是用布尔值衡量的true/false)。
+//    stopAll:停止所有队列动画(true/false)     goToEnd:在设置"stopAll"时才有效,决定当前动画是否继续完成(某语句)。
+//
+//文档操作
+// .addClass("zl")向选定的元素添加class"zl"    .after("<p>周亮</p>")向指定的元素后添加指定的内容(可以带标签)  .before(<p>zl</p>)向指定的元素前添加指定的内容
+// .removeClass("zl")向选定的元素移除class"zl" .append("p>周亮</p>")指定的元素结尾(在元素内)添加指定的内容    .prepend("p>周亮</p>")指定的元素开头(在元素内)添加
+// .removeAttr("id") 移除被选元素的属性
+// .appendTo()  例$("<b>Hello World!</b>").appendTo("p")  依就在p内部结尾,选择方式/位置不同。
+// .prependTo() 例$("<b>Hello World!</b>").prependTo("p") 依就在p内部开头,选择方式/位置不同。
+// .hasClass("zl") 检查被选元素是否含有指定的class"zl"    .toggleClass()向选定的元素切换不同的class
+// .attr()设置或者返回被选元素的属性   返回图片宽度 $("img").attr("width")  设置图片宽度 $("img").attr("width","200px")
+//                                                                                $("img").attr("width":"200px","height":"200px")
+// .html() 方法返回或设置被选元素的内容 (inner HTML)  .html()如果不设置值时, 则返回选定元素的内容   .html("hello <b>word</b>")向选定的元素设置新内容(覆盖旧内容)
+// .text()方法返回或设置被选元素的文本内容             .text()返回选定元素文本内容(会删除html标记)  .text("hello")向选定的元素设置新内容(覆盖旧内容)
+// .val()方法返回或设置被选元素的值                 .val()返回被选元素的值               $(":text").val("zl")设置被选元素的值
+// .remove()移除所有的被选元素,包括子元素
+// .empty()移除选定元素,包括子元素,不限本身。
+// .detach()移除所有的被选元素,包括子元素,会保留事件及数据
+//  $("p").replaceWith("zl")使用指定色元素或者内容替被选元素      $("zl").replaceAll("p")效果一致。  与.appendT()  .prependTo()写法一样
+// .wrap()将被选元素放置在指定html内容与元素中。            $("P").wrap("<div></div>")将p放在div中(单独每一个)。
+// .wrapAll()将所有被选元素放置在指定html内容与元素中       $("P").wrap("<div></div>")将所有p放在一个div中
+// .wrapInner()将被选元素的内容被包裹在指定html内容或者元素中  $("p").wrapInner("<i></i>")
+// .unWrap()删除被选元素的父元素                           $("p").unWrap()  作用于父元素(父元素消失,样式也丢失)
+//
+//属性
+// .addClass()向选定元素添加class  .attr()设置或者获取属性  .attr("href")获取选定元素的href属性   .attr("href","#")设置选定元素的href属性
+// .hasClass()检查选定元素是否含有某class         $("p").hasClass("zl")
+// .html()设置或者获取html中的内容            $("p").html()获取p中的内容        $("p").html("zl")设置p中的内容
+// .removeAttr()移除选中元素的属性           $("p").removeAttr("id")
+// .removeClass()移除选中元素的class        $("p").removeClass("zl")
+// .toggleClass("zl",switch) 对选中的元素进行class切换,switch决定添加类或者删除类。
+// .val()设置或者获取选中元素的值             $("p").val()获取            $("p").val("zl")
+//
+//css操作
+// .css()设置或者返回选中元素的属性           $("p").css("color")获取p的字体颜色    $("p").css("color","red")设置颜色
+//                                        设置多个属性时$("p").css("color":"red","font-size":"20px")
+// .height()设置或者返回选中元素的高度        $("p").height()返回   $("p").height("20")  (20不能带px,否则不能生效)
+// .width()设置或者返回选中元素的宽度         $("p").width()返回   同理
+// .offset()设置或者返回选中元素相对文档的偏移(left与top)   x=$("p").offset()    $("span").text(x.left); $("span").text(x.top)
+//                                                                 $("p").offset({left:20,top:30})  (20不能带px,否则不能生效)
+// .offsetParent()返回最近有定位的祖先元素
+// .position()返回选中元素相对其父元素的位置偏移                     top  left
+// .scrollLeft()设置或者返回选中元素的滚动条的水平位置                 $("p").scrollLeft()获取    $("p").scrollLeft(100)设置
+// .scrollTop()设置或者返回选中元素的滚动条的垂直位置                  $("p").scrollTop()获取     $("p").scrollTop(100)设置
+//                      css中设置height(),width(),offset(),scrollLeft/Top()单位px不能带。
+//
+//AJAX      jQuery.ajax()   $.ajax({url:"test.html",context:document.body,success:function(){$("this").addClass("zl")  }})
+//     async 异步,类型String。决定所有请求是否是异步的。
