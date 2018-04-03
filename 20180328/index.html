@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PPT</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .pptWrap {
+            width: 100%;
+            height: 450px;
+            border: solid 1px #f00;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .pptWrap .ppts {
+            position: absolute;
+            box-sizing: border-box;
+            white-space: nowrap;
+            height: 100%;
+
+        }
+
+        .pptWrap .ppts li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            background-color: #999;
+            height: 100%;
+        }
+
+        .pptWrap .ppts li img{
+            width: 100%;
+        }
+
+
+        .pptWrap .pagination {
+            position: absolute;
+            width: 200px;
+            margin-left: -100px;
+            bottom: 10px;
+            left: 50%;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .pptWrap .leftBtn, .pptWrap .rightBtn {
+            border-radius: 50%;
+            line-height: 1.5;
+            font-size: 14px;
+            display: inline-block;
+            padding: 4px 12px;
+            text-align: center;
+            background-color: rgba(30, 30, 30, 0.6);
+            cursor: pointer;
+        }
+
+        .pptWrap .leftBtn:hover, .pptWrap .rightBtn:hover {
+            background-color: #333;
+        }
+
+        .pptWrap .pageText {
+            display: inline-block;
+            height: 20px;
+            background-color: rgba(30, 30, 30, 0.6);
+            padding: 4px 12px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="pptWrap">
+    <ul class="ppts">
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+        <li><img src="http://pic.pptbz.com/201506/2015070581208537.JPG" alt=""></li>
+    </ul>
+    <div class="pagination">
+        <span class="leftBtn"><</span>
+        <span class="pageText">
+            <span class="currentPage">1</span>
+            of
+            <span class="totalPage"></span>
+        </span>
+        <span class="rightBtn"> > </span>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var liCount = $(".pptWrap .ppts li").length;
+        $(".pptWrap .totalPage").text(liCount);
+
+        var wrapWidth = parseFloat($(".pptWrap").css("width"));
+
+        $(".pptWrap .ppts li").css({
+            width: wrapWidth + "px"
+        });
+        $(".pptWrap .ppts").css({
+            width: ( liCount * wrapWidth ) + "px"
+        });
+
+        var currentPage = 1;
+
+        $(".leftBtn").click(function () {
+            if (currentPage === 1) {
+                currentPage = liCount
+            }
+            else {
+                currentPage--
+            }
+            ;
+            updateStyle()
+
+        });
+        $(".rightBtn").click(function () {
+            if (currentPage === liCount) {
+                currentPage = 1;
+            }
+            else {
+                currentPage++
+            }
+            updateStyle()
+        });
+        function updateStyle() {
+            $(".currentPage").text(currentPage)
+            $(".pptWrap .ppts").animate({
+                "left": ( -(wrapWidth + 4) * (currentPage - 1)) + "px"
+            }, 200)
+        }
+
+        var timer = setInterval(function () {
+            if (currentPage === liCount) currentPage = 1;
+            else currentPage++;
+            updateStyle();
+        }, 6000);
+
+        $(".pptWrap .ppts").mouseenter(function () {
+            clearInterval(timer)
+        });
+
+        $(".pptWrap .ppts").mouseleave(function () {
+            timer = setInterval(function () {
+                if (currentPage === 6) currentPage = 1;
+                else currentPage++;
+                updateStyle();
+            }, 3000);
+        })
+
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: #324;
+        }
+        img {
+            float: left;
+            height: 384px;
+        }
+
+        #container {
+            position: relative;
+            width: 840px;
+            height: 384px;
+
+        }
+
+        #left {
+            position: absolute;
+            right: 50%;
+            overflow: hidden;
+            width: 49px;
+            height: 384px ;
+
+        }
+
+        #right {
+            position: absolute;
+            left: 50%;
+            overflow: hidden;
+            width: 49px;
+            height: 384px ;
+        }
+        #leftZhou{
+           position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        #rightZhou{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        #leftBg{
+            position: absolute;
+            right: 0;
+        }
+        p{
+            position: absolute;
+            z-index: 3;
+            top: 90px;
+            left: 20%;
+            width: 60%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="left">
+        <img id="leftZhou" src="http://demo.htmleaf.com/1704/201704191502/images/j1.png" alt="">
+        <img id="leftBg" src="http://demo.htmleaf.com/1704/201704191502/images/j2.png" alt="">
+    </div>
+    <div id="right">
+        <img id="rightBg" src="http://demo.htmleaf.com/1704/201704191502/images/j3.png" alt="">
+        <img id="rightZhou" src="http://demo.htmleaf.com/1704/201704191502/images/j4.png" alt="">
+    </div>
+    <P>传统音乐是在以典河流域为中心的中原音乐和四域音乐以及外国音乐的交流融合之中形成发展起来的。</P>
+</div>
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            var anTime1= 2100;
+            var anTime2 = 2000;
+            var anTime3 = 1000;
+
+            $("#left").animate({
+                width:"360px",
+            },anTime1);
+            $("#right").animate({
+                width:"360px",
+            },anTime2);
+
+            setTimeout(function () {
+                $("p").fadeIn(anTime3);
+            },Math.max(anTime1,anTime2))
+        },3000)
+
+    })
+</script>
+</body>
+</html>

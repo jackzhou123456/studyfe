@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .zl {
+            font-size: 50px;
+            color: #fff;
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body>
+<input type="text">
+<script>
+
+    var colorHexArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+
+
+
+
+
+
+    function genRandomFromArr(arr) {
+        return arr[ Math.floor(Math.random() * arr.length)];
+    }
+
+
+    $(document).ready(function () {
+        $("input").keydown(function () {
+            setTimeout(function () {
+                var inputContent = $("input").val();
+                var lastWord = inputContent[inputContent.length - 1];
+
+                var id = new Date().getTime();
+
+                $("body").append("<p class='zl' id='" + id + "'>" + lastWord + "</p>");
+                var appendWord = $("#" + id)
+
+                var inputL = $("input").offset().left;
+                var inputT = $("input").offset().top;
+                var inputL2 = inputL + Math.random() * inputL;
+                var inputW = parseFloat($("input").css("width"));
+
+                var originL = (inputL + Math.random() * inputW);
+                var targetL = (inputL + Math.random() * inputW);
+
+                var colorRandom = [0, 255];
+
+                function color(arr) {
+                    return arr[0] + (arr[1] - arr[0]) * Math.random()
+                };
+                appendWord.css({
+                    "left": originL + "px",
+                    "top": inputT + (-50) + "px",
+                    color: "#"+ genRandomFromArr(colorHexArr)+genRandomFromArr(colorHexArr)+genRandomFromArr(colorHexArr),
+//                    "font-size":"20px"
+                });
+
+                appendWord.animate({
+                    left: targetL + "px",
+                    top: "10px",
+                    "font-size": "20px",
+                    opacity: 0,
+                    color: "#fff",
+                }, 800, function () {
+                    $("#" + id).remove()
+                })
+
+
+            }, 2)
+        })
+    })
+</script>
+
+<!--<script src="index.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,53 @@
+//Bootstrap
+//H5设置文档模型<html lang="zh-CN">
+//Bootstrap有些默认样式background-color,使用 @font-family-base、@font-size-base 和 @line-height-base 变量作为排版的基本参数
+//<div class="container">宽度居中响应布局
+//.container-fluid 100%的宽
+//栅格系统
+//<div class="row">
+col-lg-3  col-md-4 col-sm-5 col-xs-3
+<div class="col-md-3"></div>
+<div class="col-md-3"></div>
+<div class="col-md-3"></div>
+<div class="col-md-3"></div>
+</div>
+//在大布局中,在"row"里放置col,(可设置多个class,自适应)
+//列偏移(12栅格布局)
+//.col-lg-3.col-offset-lg-2  .col-md-4.col-offset-md-4  .col-sm-5.col-offset-sm-2  .col-xs-3.col-offset-xs-2
+//"row"与"col"可嵌套使用
+//
+//排版
+h1-h6主标题 <small></small>副标题
+.lead让段落突出显示
+<del></del> <s></s>与css text-decoration:line-through效果相同
+<ins></ins> 额外插入的文本
+<u></u> 为文本插入下划线
+.small 添加下号文本
+<strong></strong> 着重强调文本
+<em></em> 斜体
+对齐  .text-left text-center text-right text-justify
+改变大小写 .text-lowercase  .text-uppercase  .text-capitalize    (css text-transform)
+缩略词   .attribute
+默认样式引用  <blockquote>  </blockquote>
+右对齐引用效果 <blockquote class="blockquote-reverse">
+列表
+无序列表
+有序列表
+无样式列表(.list-style)
+内联列表(.list-inline)
+自定义列表
+水平列表的描述(.dl-horizontal)
+代码
+内联代码<code></code>
+代码块<pre></pre>
+程序输出 <samp> </samp>
+表格
+常见表格 <table class="table"> </table>
+隔行增加斑马条样式 .table-striped
+带边框的表格  .table-bordered
+带鼠标悬停的状态  .table-hover
+紧缩表格  .table-condensed
+其它状态类.active .info .warning .danger 等(单元格设置背景颜色)
+表单
+
+
