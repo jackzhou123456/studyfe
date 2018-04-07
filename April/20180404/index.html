@@ -2,76 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>practice</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <style>
-       .container{
-           background-color: red;
-           height: 300px;
-           /*width: 100%;*/
-           text-decoration:line-throngh.
-       }
+        body, html {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: #666;
+            position: relative;
+        }
+
+        .left {
+            width: 100%;
+            height: 100%;
+            background-color: #f3f3f3;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .click {
+            position: absolute;
+            padding: 10px;
+            font-size: 30px;
+            right: 30px;
+            top: 40px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .right {
+            width: 300px;
+            height: 100%;
+            background-color: #666;
+            position: absolute;
+            top: 0;
+            right: -300px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 40px;
+            background-color: #666;
+            margin: 0;
+            padding: 10px;
+            color: #fff;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        .right li {
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            height: 150px;
+            width: 150px;
+            display: inline-block;
+            line-height: 150px;
+            position: relative;
+            top: 1000px;
+        }
+
+        .right li:nth-child(1) {
+            background-color: #669900;
+        }
+        .right li:nth-child(2){
+            background-color: #3cf;
+        }
+        .right li:nth-child(3){
+            background-color: #d24;
+        }
+        .right li:nth-child(4){
+            background-color: #279;
+        }
+        .right li:nth-child(5){
+            background-color: #8e4;
+        }
+        .right li:nth-child(6){
+            background-color: #fa4;
+        }
+        .right li:nth-child(7){
+            background-color: #283;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
-<div class="container"></div>
-<table class="table ">
-    <tr>
-        <th class="active">jfj</th>
-        <th>fjjf</th>
-        <th>jff</th>
-        <th>jjeje</th>
-    </tr>
-    <tr>
-        <td class="warning">jfj</td>
-        <td>fjjf</td>
-        <td>jff</td>
-        <td>jjeje</td>
-    </tr>
-    <tr>
-        <td>jfj</td>
-        <td>fjjf</td>
-        <td>jff</td>
-        <td>jjeje</td>
-    </tr>
-    <tr>
-        <td class="danger">jfj</td>
-        <td>fjjf</td>
-        <td>jff</td>
-        <td>jjeje</td>
-    </tr>
+<div class="container">
+    <div class="left">
+        <div class="click">
+            <i class="fa fa-align-justify"></i>
+        </div>
+    </div>
+    <div class="right">
+        <p>
+            <i class="fa fa-align-justify"></i>
+        </p>
+        <ul>
+            <li><i class="fa fa-cny"></i></li><!--
+            --><li><i class="fa fa-mobile"></i></li><!--
+            --><li><i class="fa fa-home"></i></li><!--
+            --><li><i class="fa fa-arrow-left"></i></li><!--
+            --><li><i class="fa fa-leaf"></i></li><!--
+            --><li><i class="fa fa-lock"></i></li><!--
+            --><li><i class="fa fa-key"></i></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        var status=0;
+        $(".click").click(function () {
+            if(status===0){
+                $("p").slideDown();
+                $(".container").animate({
+                    "left":"-300px",
+                },200,function () {
+                    $(".right li:nth-child(1),.right li:nth-child(2)").animate({"top":"0px"},200);
+                    $(".right li:nth-child(3),.right li:nth-child(4)").animate({"top":"0px"},300);
+                    $(".right li:nth-child(5),.right li:nth-child(6)").animate({"top":"0px"},400);
+                    $(".right li:nth-child(7)").animate({"top":"0px"},500);
+                });
 
-</table>
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox"> Check me out
-        </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+                status=1
+            }
+            else {
+                $("p").slideUp();
+                $(".right li").animate({
+                    "top":"1000px"
+                },150,function () {
+                    $(".container").animate({
+                        "left":"0px",
+                    },150);
+                })
 
-<div></div>
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+               status=0
+            }
+        })
+    })
+
+</script>
 </body>
 </html>
