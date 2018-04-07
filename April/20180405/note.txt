@@ -1,0 +1,67 @@
+//Array
+1,属性
+    .length设置或获取数组元素的数目   .length  获取     array.length=7 设置
+2,方法
+    .concat()连接两个或者多个数组(不会改变现有的数组,仅返回一个新连接副本)   .concat(arrayX,arrayY。。。。也可以是具体数值 )
+    .join()将数组中的元素转化为一个字符串,通过字符串分隔。 .join(separator)默认的是','此时与.toString()方法相同。
+    .pop()移除数组最后一个元素,返回被移除元素,会改变数组长度。 无参数。
+    .shift()移除数组第一个元素,并返回被移除元素,会改变数组长度。 无参数。
+    .push()在数组的末尾添加一个或者多个元素,返回新长度。会改变数组长度。  .push(item1,item2。。。)
+    .unshift()在数组开头添加一个或者多个元素。返回新长度。会改变数组长度。    .unshift(item1,item2。。。)
+    .splice()移除或添加新元素,返回被删除的项目。 会改变数组。    .splice(index'必须',howmany'必须',item,。。。。'可选')
+    .slice()选取指定区间的元素。  .slice(start'必须',end)不会改变数组。
+    .reverse() (背面,颠倒,相反)颠倒数组中元素的顺序。会改变数组。
+    .sort() (分类,品质,种类)将数组里的元素排序。   .sort(function())默认无,会以字母向上排列。当数字排序时,必须传函数,function(a,b){
+    return a-b}从小到大 { return b-a}从大到小
+
+//math
+1,属性
+    .E常量e,自然对数的底数(2.718)
+    .LIN2返回2的自然对数(0.693)
+    .LIN10返回10的自然对数(2.302)
+    .LOG2E返回以2为底e的对数(1.414)
+    .LOG10E返回以10为底e的对数(0.434)
+    .PI返回圆周率的值
+    .SQRT2返回2的平方跟
+    .SQRT1_2返回2的平方跟的倒数
+2,方法
+    .abs(x)返回x的绝对值
+    .floor(X)向下取整,小于或等于X的值
+    .ceil(X)向上取整,大于或等于X的值
+    .max(x,y,z。。。)返回里面最大的值
+    .min(x,y,z。。。)返回里面最小的值
+    .pow(x,y)返回x的y次幂
+    .random()返回0-1之间的随机数
+    .round(x)返回最接近x的整数(四舍五入)
+    .sqrt(x)返回x的平方根
+
+//Date
+1,属性
+
+2,方法
+    .Date()返回当前的日期
+    .getDate()返回当前月份的某一天(1-31)
+    .getDay()返回星期中的某一天的数字(0-6周日到周六),一般结合一个Date对象使用
+    .getMonth()返回月份(0-11返回1到12月份),一般结合一个Date对象使用
+    .getFullYear()返回4为数字表示的年份,一般结合一个Date对象使用
+    .getYear()已停用,建议使用上面的返回年份的值
+    .getHours()返回时间的小时字段,一般结合一个Date对象使用(0-23返回24点到23点)
+    .getMinutes()返回时间的分钟字段,一般结合一个Date对象使用(0-59)
+    .getSeconds()返回时间的秒,一般结合一个Date对象使用(0-59)
+    .getMilliseconds()返回时间的毫秒,一般结合一个Date对象使用(0-999)
+    .getTime()返回1970年1月1号距现在之间的毫秒数
+    .setDate(day'必须')设置月份的某一天
+    .setMonth(month'必须',day'可选')设置月份(前面是月份,后面是设置月份的某一天)
+    .setFullYear(year'必须',month'可选',day'可选')设置年份
+    .setHours(hours,minutes'可选',seconds'可选',milliseconds'可选')设置小时
+    .setMinutes(minutes'必须',seconds'可选',milliseconds'可选')设置分钟
+    .setSeconds(seconds'必须',milliseconds'可选')设置秒
+    .setMilliseconds(milliseconds'必须')设置毫秒
+    .setTime(milliseconds)以毫秒设置Date对象
+
+
+
+
+
+
+

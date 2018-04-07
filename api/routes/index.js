@@ -131,7 +131,7 @@ router.get('/zhiHuDaily', function (req, res, next) {
 
 router.post('/login', function (req, res, next) {
     if (req.body.user_name === "zhouliang" && req.body.password === '123456') {
-        res.josn({
+        res.json({
             err_no: 0,
             result: {
                 userName: "Jack ZHou",

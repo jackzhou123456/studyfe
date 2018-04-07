@@ -1,0 +1,32 @@
+//JavaScript
+String
+    1,属性
+    .length(字符串中的字符数目)  stringObject.length  str="Zhou Liang"  str.length===10
+    2,方法                                                                      0123 45678
+    charAt()返回指定位置的字符(目标值"下标标识")。   stringObject.charAt(index'必须')  str="Zhou Liang"    str.charAt(4)===L    如果目标值不在0与length之间,则返回空字符串。
+    charCodeAt()返回指定位置的字符的Unicode编码。范围在(0-65535之间的整数)   stringObject.charCodeAt(index'必须')  如果目标值是负数或者大于等于字符串的length,返回NaN。
+    concat()用于连接两个或者多个字符串。将所有的参数转化为字符串,然后按顺序连接到stringObject的尾部,并返回连接后的字符串,stringObject本身未改变   stringObject.concat(stringX,stringY,stringZ...)   var1="hello "  var2="world"  str1.concat(str2)==="hello world"
+    string.fromCharCode(numX,numX,mumY...)指定Unicode的值,返回一个字符串。document.write(String.fromCharCode(65,66,67))===ABC 这个方法的是静态方法,已经指定了,不能自定义新的string。
+    .indexOf(searchValue'必须',fromIndex'可选包括当前目标值')返回某个指定字符串值在字符串中首次出现的位置。如果没有当前指定值返回-1。
+   .lastIndexOf(searchValue'必须',fromIndex'可选包括当前目标值')返回指定字符串值最后出现的位置(从头开始),在字符串中的指定位置从后向前搜索(不会改变选定字符在字符串中的位置,若果范围够大)。如果没有当前指定值返回-1。
+    .match()在字符串中检索指定的值,或者找到一个或者多个表达式的匹配   stringObject.match(searchvalue'必须')如果没找到返回null   str.match("post")====post   stringObject.match(regexp'必须')正对regexp是否有标志g分类说明。   str.match(/\d+/g)全局匹配的正则表达式来检索字符串的所有数字
+    .replace(regexp/substr'必须',replacement'必须')用于字符串中一些字符串的替换,或者替换一个与正则表达式匹配的子串。    str.replace(/hello/,"zhouliang")字符串的替换  str.replace(/hello/g,"zhouliang")全局替换
+    .search(regexp/substr)用于检索字符串中指定的子字符串或者检索与正则表达式匹配的子字符串(不执行全局匹配,返回上的是位置),总是从字符串的开始进行检索,总是返回第一个与stringObject匹配的位置。如未找到则返回-1.    var str="zhou liang"  str.search(/Liang/i)===5(加/ /i忽略大小写)
+    .slice(start,end)可提取字符串的某个(下标开始或结束)部分,并以新的字符串返回被提取的部分。index目标,返回提取的部分,"end"属于可选,如只有单一参数,则表示到字符串结尾为止。参数可以是负整数。包下不包上(包含start,不包含end)
+    .substr()用于在字符串中提取从start下标开始的指定数目的字符。  stringObject.substr(start'必须',length'可选'),参数分别代表提取子串的开始的下标与长度。(包下包含start)
+    .substring()用于提取字符串中介于两个指定下标间的字符。stringObject.substring(start'必须',stop'可选')必须是非负整数,与slice()相同,就是参数上有点差别。包下不包上(包含start,不包含stop)
+    .split(separator'必须',howmany'可选')把一个字符串分割成字符串数组。 var str=how old are you?   str.split("")===h,o,w, ,o,l,d, ,a....       str.split(" ")===how,old,are,you?   str.split(" ",3)===how,old,are .
+    .sub()用于把字符串显示为下标,没有参数。对应有个.sup()把字符串显示为上标,例如2的平方。
+    .toLocaleLowerCase()将字符串转化为小写。(本地方式)    .toLowerCase()差不多   土耳其语言具有特有的大小写映射.
+    .toLocaleUpperCase()将字符串转化为大些。(本地方式)    .toUpperCase()差不多   土耳其语言具有特有的大小写映射.
+    .toString()返回字符串,一般搭配array.toString()     boolean.toString()等。。。。
+//Number
+    1,属性
+    Number.MAX_VALUE    表示最大值
+          .MIN_VALUE    表示最小值
+    Number.NEGATIVE_INFINITY    表示负无穷
+          .POSITIVE_INFINITY    表示正无穷
+    2,方法
+    .toString()将Number对象转化为一个字符串,并返回结果    .toString(radix基数'可选') 范围2-36之间的整数
+    .toFixed()将Number四舍五入为指定的小数位数的数字      .toFixed(num'必须')范围0-20(包含上下)
+    .toPrecision()将对象的值超出指定位数时将其转化为指数计数法。   .toPrecision(num'必须') 1-21(包含上下)
